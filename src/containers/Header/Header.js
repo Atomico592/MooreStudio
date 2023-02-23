@@ -5,8 +5,10 @@ import "./Header.scss"
 const Header = () => {
     return (
         <div className="header">
+        <div className="container">
             <NavList/>
-        </div>
+        </div></div>
+
     );
 };
 
