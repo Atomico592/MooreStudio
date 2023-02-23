@@ -3,13 +3,15 @@
 .search-block {
   display: flex;
   justify-content: space-between;
-
   &__catalog {
     border-radius: 5px;
       background: #F8F0F0;
       padding: 16px 30px;
     border: none;
      cursor: pointer;
+    @include xl {
+    display: none;
+    }
   }
   &__panel {
     width: 741px;
@@ -24,7 +26,10 @@
     @include xxl {
       display: block;
       max-width: 250px;
-
+    }
+    @include xxl {
+      display: block;
+      height: 30px;
     }
   }
 }
@@ -37,5 +42,8 @@
   height: 48px;
   &:hover {
     background-color: beige;
+  }
+  @include xl {
+    display: none;
   }
 }

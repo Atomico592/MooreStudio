@@ -1,3 +1,5 @@
+@import "/src/scss/style";
+
 .footer {
   &__ul {
     color: #FFFFFF;
@@ -27,10 +29,21 @@
           }
         }
       }
+
   }
   &__flex {
     display: flex;
     justify-content: space-between;
+  }
+  &__category {
+    @include xfl {
+      display: none;
+    }
+  }
+  &__contacts {
+    @include xl {
+      display: none;
+    }
   }
 }
 
