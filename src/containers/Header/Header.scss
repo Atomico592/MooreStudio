@@ -1,5 +1,10 @@
+@import "/src/scss/style";
+
 .header {
     background-color: #F8F8F8;
     height: 54px;
     margin-bottom: 23px;
+    @include xl {
+        height: auto;
+    }
 }

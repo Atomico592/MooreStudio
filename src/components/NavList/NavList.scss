@@ -17,6 +17,9 @@
                 color: gray;
             }
         }
+        @include xfl {
+            display: none;
+        }
     }
     &__user-menu {
         display: flex;
@@ -29,5 +32,11 @@
                 display: none;
             }
         }
+    }
+}
+.dashboard {
+    display: none;
+    @include xfl {
+        display: block;
     }
 }
