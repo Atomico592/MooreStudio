@@ -19,6 +19,7 @@
     border: 1px solid #E6E6E6;
     border-radius: 5px;
     padding-left: 10px;
+
     &::placeholder {
       padding-left: 17px;
       background: url("Ellipse 2753.png") no-repeat;
@@ -45,5 +46,31 @@
   }
   @include xl {
     display: none;
+  }
+}
+
+.window {
+  position: absolute;
+  width: 650px;
+  height: auto;
+  top: 130px;
+  right: 384px;
+  background-color: white;
+  border-radius: 3px;
+  @include xxxl {
+    right: 224px;
+  }
+  @include xxl {
+    width: 300px;
+    right: 270px;
+  }
+  @include xfl {
+    width: 200px;
+    right: 250px;
+  }
+  @include xl {
+    width: 200px;
+    right: 100px;
+    top: 100px;
   }
 }

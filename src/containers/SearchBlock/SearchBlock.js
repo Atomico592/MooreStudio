@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Logo from "../../components/UI/Logo/Logo";
 import "./SearchBlock.scss"
-import {TextField} from "@mui/material";
+import newdata from "../Checkout/CheckoutData";
+import {inputChangeHandler} from "../../components/UI/Form/Handlers/Handlers";
 
 const SearchBlock = () => {
+    const [state, setState] = useState({name: ""})
+    const [data, setData] = useState(newdata)
     return (
         <div className="container">
         <div className="search-block" style={{paddingBottom: "50px" }}>
@@ -22,7 +25,14 @@ const SearchBlock = () => {
                 className="search-block__panel"
                 type="text"
                 placeholder="Найти товар"
+                name="name"
+                value={state.name}
+                onChange={e => (inputChangeHandler(e, setState))}
+
             />
+            {state.name != "" ? (<div className="window">{data.map(item => (
+                <p style={{paddingLeft: "20px"}}>{item.name} <span>{item.artic}</span> <span>{item.price} c</span></p>
+            ))}</div>) : null}
             <button className="btn-style"><svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.75 3.25H1L3.8125 14.5H14.5L16.75 3.25ZM16.75 3.25L17.3125 1H20.6875" stroke="#333333"/>
                 <path d="M6.6875 17.3125C6.6875 17.9683 6.15584 18.5 5.5 18.5C4.84416 18.5 4.3125 17.9683 4.3125 17.3125C4.3125 16.6567 4.84416 16.125 5.5 16.125C6.15584 16.125 6.6875 16.6567 6.6875 17.3125Z" stroke="#333333"/>
