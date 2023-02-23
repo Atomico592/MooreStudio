@@ -32,7 +32,7 @@ const Goods = () => {
                             </TableCell>
                             <TableCell align="right">{item.name}</TableCell>
                             <TableCell align="right">{item.artic}</TableCell>
-                            <TableCell align="right">asdasd</TableCell>
+                            <TableCell align="right"><span style={{background: "#F7F7F7", borderRadius: "5px", padding: "5px"}}>+ 0 -</span></TableCell>
                             <TableCell align="right">{item.price}c</TableCell>
                         </TableRow>
                     ))}

@@ -17,17 +17,30 @@
     height: 60px;
     background: #F6F6FC;
     border-radius: 5px;
-
+    &-commentary {
+      width: 780px;
+      height: 60px;
+      background: #F6F6FC;
+      border-radius: 5px;
+    }
   }
   &__inner-input {
     display: flex;
     justify-content: space-between;
   }
-}
+  &__subtitle {
+    margin: 0;
+    padding-bottom: 20px;
+    color: #333333;
+    opacity: 0.5;
+    font-size: 18px;
 
-.iam {
+  }
+}
+.inner-blocks {
   padding: 30px 30px 30px 30px;
   background: #FFFFFF;
   box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
+  margin-bottom: 30px;
 }

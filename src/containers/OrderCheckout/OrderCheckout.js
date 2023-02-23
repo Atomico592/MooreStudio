@@ -38,6 +38,12 @@ const OrderCheckout = () => {
             dob: "",
             email: "",
             secondNumber: "",
+            country: "",
+            city: "",
+            st : "",
+            flat: "",
+            home: "",
+            commentary: ""
         })
     console.log(state)
     return (
@@ -92,7 +98,7 @@ const OrderCheckout = () => {
             </div>
         </div>
 
-            <div className="iam">
+            <div className="inner-blocks">
                 <h3 className="order-checkout__title">Я</h3>
                 <RadioGroup name="use-radio-group" defaultValue="first">
                     <MyFormControlLabel
@@ -124,6 +130,101 @@ const OrderCheckout = () => {
                             />
                         } />
                 </RadioGroup>
+            </div>
+
+            <div className="inner-blocks">
+                <h3 className="order-checkout__title">Доставка</h3>
+                <h5 className="order-checkout__subtitle">Способ доставки</h5>
+                <RadioGroup name="use-radio-group" defaultValue="third">
+                    <MyFormControlLabel
+                        onChange={e => (inputChangeHandler(e, setState))}
+                        value="third"
+                        label="Самовывоз"
+                        control={
+                            <Radio
+                                sx={{
+                                    color: "grey",
+                                    '&.Mui-checked': {
+                                        color: "red",
+                                    },
+                                }}
+                            />
+                        }/>
+                    <MyFormControlLabel
+                        onChange={e => (inputChangeHandler(e, setState))}
+                        value="four"
+                        label="Курьерская доставка"
+                        control={
+                            <Radio
+                                sx={{
+                                    color: "grey",
+                                    '&.Mui-checked': {
+                                        color: "red",
+                                    },
+                                }}
+                            />
+                        } />
+                </RadioGroup>
+                <h5 className="order-checkout__subtitle" style={{paddingTop: "30px"}}>Адрес доставки</h5>
+                <div   className="order-checkout__inner-input">
+                    <div style={{paddingRight: "30px"}}>
+                        <TextField
+                            style={{marginBottom: "30px"}}
+                            className="order-checkout__input"
+                            id="outlined-basic"
+                            label="Страна"
+                            name="country"
+                            value={state.country}
+                            onChange={e => (inputChangeHandler(e, setState))} />
+                        <TextField
+                            style={{marginBottom: "30px"}}
+                            className="order-checkout__input"
+                            id="outlined-basic"
+                            label="Улица"
+                            variant="outlined"
+                            name="st"
+                            value={state.st}
+                            onChange={e => (inputChangeHandler(e, setState))} />
+                        <TextField
+                            className="order-checkout__input"
+                            id="outlined-basic"
+                            label="Дом"
+                            variant="outlined"
+                            value={state.home}
+                            name="home"
+                            onChange={e => (inputChangeHandler(e, setState))} />
+                    </div>
+                    <div>
+                        <TextField
+                            style={{marginBottom: "30px"}}
+                            className="order-checkout__input"
+                            id="outlined-basic"
+                            label="Город"
+                            variant="outlined"
+                            name="city"
+                            value={state.city}
+                            onChange={e => (inputChangeHandler(e, setState))} />
+                        <TextField
+                            className="order-checkout__input"
+                            id="outlined-basic"
+                            label="Квартира"
+                            variant="outlined"
+                            name="flat"
+                            value={state.flat}
+                            onChange={e => (inputChangeHandler(e, setState))} />
+                    </div>
+                </div>
+                <h5 className="order-checkout__subtitle" style={{fontSize: "15px", paddingTop: "30px"}}>Указать домофон, этаж, подъезд и комментарий к адресу
+                </h5>
+                <TextField
+                    style={{marginBottom: "30px"}}
+                    className="order-checkout__input-commentary"
+                    id="outlined-basic"
+                    label="Комментарий"
+                    variant="outlined"
+                    name="commentary"
+                    value={state.commentary}
+                    onChange={e => (inputChangeHandler(e, setState))} />
             </div>
         </>
     );
