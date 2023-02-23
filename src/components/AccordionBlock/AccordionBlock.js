@@ -11,7 +11,7 @@ const AccordionBlock = () => {
 
     return (
         <div>
-            <Accordion>
+            <Accordion style={{marginBottom: "30px"}}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"

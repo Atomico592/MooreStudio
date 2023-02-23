@@ -1,0 +1,33 @@
+.order-checkout {
+  padding: 30px 30px 30px 30px;
+  background: #FFFFFF;
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  &__title {
+    margin: 0;
+    padding-bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333333;
+  }
+  &__input {
+    width: 375px;
+    height: 60px;
+    background: #F6F6FC;
+    border-radius: 5px;
+
+  }
+  &__inner-input {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.iam {
+  padding: 30px 30px 30px 30px;
+  background: #FFFFFF;
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+}

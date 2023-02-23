@@ -2,6 +2,7 @@ import React from 'react';
 import AccordionBlock from "../../components/AccordionBlock/AccordionBlock";
 import "./Checkout.scss"
 import Goods from "./Goods/Goods";
+import OrderCheckout from "../OrderCheckout/OrderCheckout";
 
 const Checkout = () => {
 
@@ -11,6 +12,7 @@ const Checkout = () => {
             <div className="checkout__basket">
                 <AccordionBlock count="3" content={Goods}/>
                 <div></div>
+                <OrderCheckout/>
             </div>
         </div>
     );
