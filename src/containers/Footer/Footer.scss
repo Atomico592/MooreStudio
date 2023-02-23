@@ -1,0 +1,40 @@
+.footer {
+  &__ul {
+    color: #FFFFFF;
+    padding-bottom: 50px;
+  }
+  background: url("kanzler.png"), #262626;
+  background-repeat: no-repeat;
+  background-position: 89%;
+  &__menu {
+      &-list {
+        padding-bottom: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        opacity: 0.5;
+        list-style-type: none;
+        &:hover {
+          font-size: 15px;
+          opacity: 1;
+        }
+        &-white {
+          padding-bottom: 12px;
+          cursor: pointer;
+          text-decoration: none;
+          list-style-type: none;
+          &:hover {
+            font-size: 15px;
+          }
+        }
+      }
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.line {
+  margin-bottom: 50px;
+  opacity: 0.5;
+}
