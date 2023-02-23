@@ -1,10 +1,21 @@
+@import "/src/scss/style";
+
 .checkout {
   padding-bottom: 140px;
     &__title {
       color: #333333;
       font-size: 40px;
+      @include xfl {
+        font-size: 25px;
+      }
      }
   &__basket {
     width: 840px;
+    @include xfl {
+      max-width: 600px;
+    }
+    @include xl {
+      max-width: 350px;
+    }
   }
 }

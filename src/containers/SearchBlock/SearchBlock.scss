@@ -1,6 +1,9 @@
+@import "/src/scss/style";
+
 .search-block {
   display: flex;
   justify-content: space-between;
+
   &__catalog {
     border-radius: 5px;
       background: #F8F0F0;
@@ -17,6 +20,11 @@
     &::placeholder {
       padding-left: 17px;
       background: url("Ellipse 2753.png") no-repeat;
+    }
+    @include xxl {
+      display: block;
+      max-width: 250px;
+
     }
   }
 }

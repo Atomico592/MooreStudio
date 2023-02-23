@@ -22,7 +22,7 @@ const Goods = () => {
         setState(state.filter(item => item.name !== id.name))
     }
     return (
-        <div style={{display: "flex", justifyContent: "space-between", position: "relative"}}>
+        <div style={{display: "flex", justifyContent: "space-between", position: "relative"}} >
             <div>
         <TableContainer>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -58,7 +58,7 @@ const Goods = () => {
             </Table>
         </TableContainer>
                 </div>
-                <div className="inner-blocks__price-order" style={{position: "fixed", right: "183px", top: "156px"}}>
+                <div className="inner-blocks__price-order">
                     <h3 className="order-checkout__title">Стоимость заказа</h3>
                     <p style={{display: "flex", justifyContent: "space-between", fontSize: "15px", color: "#333333"}}>Товары ({state.length}) <span>{totalPrice} c</span></p>
                     <p style={{display: "flex", justifyContent: "space-between", fontSize: "15px", color: "#333333"}}>Доставка  <span>Бесплатно</span></p>

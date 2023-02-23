@@ -1,3 +1,5 @@
+@import "/src/scss/style";
+
 .button {
   background: #EA5A5A;
   padding: 23px 113px;
@@ -16,5 +18,10 @@
   cursor: pointer;
   &:hover {
     color: blue;
+  }
+}
+.table {
+  @include xl {
+    max-width: 300px;
   }
 }

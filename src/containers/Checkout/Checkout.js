@@ -10,8 +10,9 @@ const Checkout = () => {
         <div className="checkout container">
             <h1 className="checkout__title">Оформление заказа</h1>
             <div className="checkout__basket">
+                <div className="crunch">
                 <AccordionBlock count="3" content={Goods}/>
-                <div></div>
+                </div>
                 <OrderCheckout/>
             </div>
         </div>
