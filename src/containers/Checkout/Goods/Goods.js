@@ -18,6 +18,9 @@ const Goods = () => {
     for (let i = 0; i < a.length; i++) {
         totalPrice += a[i]
     }
+    const click = (id) => {
+        setState(state.filter(item => item.name !== id.name))
+    }
     return (
         <div style={{display: "flex", justifyContent: "space-between", position: "relative"}}>
             <div>
@@ -45,6 +48,10 @@ const Goods = () => {
                             <TableCell align="right">{item.artic}</TableCell>
                             <TableCell align="right"><span style={{background: "#F7F7F7", borderRadius: "5px", padding: "5px"}}>+ 0 -</span></TableCell>
                             <TableCell align="right">{item.price}c</TableCell>
+                            <TableCell align="right"> <button onClick={() => click(item)} style={{border: "none", background: "none", cursor: "pointer" }}><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 7M13 13L7 7M7 7L13 1M7 7L1 13" stroke="#EA5A5A"/>
+                            </svg></button>
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
