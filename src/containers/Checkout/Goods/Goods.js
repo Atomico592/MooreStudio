@@ -23,10 +23,10 @@ const Goods = () => {
     }
     return (
         <div style={{display: "flex", justifyContent: "space-between", position: "relative"}} >
-            <div>
+            <div className='test'>
         <TableContainer>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
+                <TableHead  >
                     <TableRow>
                         <TableCell>Фото</TableCell>
                         <TableCell align="right">Название</TableCell>

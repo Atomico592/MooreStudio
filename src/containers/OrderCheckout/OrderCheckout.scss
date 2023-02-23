@@ -75,11 +75,12 @@
     position: fixed;
     right: 183px;
     top: 156px;
+    z-index: 9999;
     @include xxl {
       top: 600px;
       right: 20px;
       opacity: 0.7;
-      z-index: 9999;
+      width: 300px;
     }
   }
   @include xl {

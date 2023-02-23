@@ -45,7 +45,6 @@ const OrderCheckout = () => {
             home: "",
             commentary: ""
         })
-    console.log(state)
     return (
         <div style={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
         <div className="order-checkout">
