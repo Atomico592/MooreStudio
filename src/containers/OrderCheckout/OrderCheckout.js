@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {TextField} from "@mui/material";
 import {inputChangeHandler} from "../../components/UI/Form/Handlers/Handlers";
-import "./OrderCheckout.scss"
 import RadioGroup, {useRadioGroup} from "@mui/material/RadioGroup";
 import Radio from "@mui/material/Radio";
 import FormControlLabel, {FormControlLabelProps} from "@mui/material/FormControlLabel";
 import {styled} from "@mui/material/styles";
+import "./OrderCheckout.scss"
 
 interface StyledFormControlLabelProps extends FormControlLabelProps {
     checked: boolean;
@@ -47,7 +47,7 @@ const OrderCheckout = () => {
         })
     console.log(state)
     return (
-        <>
+        <div style={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
         <div className="order-checkout">
             <h3 className="order-checkout__title">Оформление заказа</h3>
             <div   className="order-checkout__inner-input">
@@ -97,7 +97,6 @@ const OrderCheckout = () => {
                 </div>
             </div>
         </div>
-
             <div className="inner-blocks">
                 <h3 className="order-checkout__title">Я</h3>
                 <RadioGroup name="use-radio-group" defaultValue="first">
@@ -131,7 +130,6 @@ const OrderCheckout = () => {
                         } />
                 </RadioGroup>
             </div>
-
             <div className="inner-blocks">
                 <h3 className="order-checkout__title">Доставка</h3>
                 <h5 className="order-checkout__subtitle">Способ доставки</h5>
@@ -226,7 +224,7 @@ const OrderCheckout = () => {
                     value={state.commentary}
                     onChange={e => (inputChangeHandler(e, setState))} />
             </div>
-        </>
+        </div>
     );
 };
 

@@ -6,9 +6,14 @@
     &__list {
         display: inline-block;
         &-li {
+            cursor: pointer;
             text-decoration: none;
             display: inline-block;
             padding-left: 30px;
+            &:hover {
+                font-size: 15px;
+                color: gray;
+            }
         }
     }
     &__user-menu {

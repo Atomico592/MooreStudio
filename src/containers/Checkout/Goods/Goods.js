@@ -6,10 +6,21 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import "./Goods.scss"
 
 const Goods = () => {
     const [state, setState] = useState(data)
+    let totalPrice = 0;
+
+   const  a = state.map(item => {
+        return item.price
+    })
+    for (let i = 0; i < a.length; i++) {
+        totalPrice += a[i]
+    }
     return (
+        <div style={{display: "flex", justifyContent: "space-between", position: "relative"}}>
+            <div>
         <TableContainer>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
@@ -39,6 +50,19 @@ const Goods = () => {
                 </TableBody>
             </Table>
         </TableContainer>
+                </div>
+                <div className="inner-blocks__price-order" style={{position: "fixed", right: "183px", top: "156px"}}>
+                    <h3 className="order-checkout__title">Стоимость заказа</h3>
+                    <p style={{display: "flex", justifyContent: "space-between", fontSize: "15px", color: "#333333"}}>Товары ({state.length}) <span>{totalPrice} c</span></p>
+                    <p style={{display: "flex", justifyContent: "space-between", fontSize: "15px", color: "#333333"}}>Доставка  <span>Бесплатно</span></p>
+                    <hr/>
+                    <p style={{display: "flex", justifyContent: "space-between", fontSize: "18px", fontWeight: "bold"}}>Итого <span style={{color: "#EA5A5A"}}>{totalPrice} c</span></p>
+                    <div style={{textAlign: "center"}}>
+                    <button className="button">Подтвердить заказ</button>
+                    <p style={{textAlign: "center", width: "332px", paddingLeft: "47 px"}}>Подтверждая заказ, я принимаю условия  <span className="agreement">пользовательского соглашения</span></p>
+                    </div>
+                </div>
+        </div>
     );
 };
 
