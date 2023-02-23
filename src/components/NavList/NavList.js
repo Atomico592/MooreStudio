@@ -3,7 +3,7 @@ import "./NavList.scss"
 
 const NavList = () => {
     return (
-        <div className="nav">
+        <div className="nav container">
         <ul className="nav__list">
             <li className="nav__list-li">Каталог</li>
             <li className="nav__list-li">Акции</li>
