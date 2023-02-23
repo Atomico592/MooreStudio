@@ -16,9 +16,13 @@
   }
 }
 .btn-style {
+  cursor: pointer;
   background-color: #F7F7F7;
   border: 1px solid #E6E6E6;
   border-radius: 5px;
   width: 48px;
   height: 48px;
+  &:hover {
+    background-color: beige;
+  }
 }
